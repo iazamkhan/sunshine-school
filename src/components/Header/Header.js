@@ -10,6 +10,11 @@ function Header() {
       </section>
       <section className="right-section">
         <span className="first-line">MADARSA</span>
+        <span className="second-line">SUNSHINE ISLAMIC SCHOOL</span>
+        <span className="third-line">AN ENGLISH MEDIUM CO-EDUCATONAL SCHOOL WITH URDU, QURAN AND DEENIYAT</span>
+        <span className="fourth-line">NAHAL, GHAZIABAD</span>
+        <span className="fifth-line">ADMISSION FORM</span>
+        <hr />
       </section>
     </div>
   )

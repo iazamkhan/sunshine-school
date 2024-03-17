@@ -3,11 +3,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px 0 0;
     
 
     @media only screen and (min-width: 800px) {
-        padding: 20px 100px;
+        padding: 20px 100px 0;
     }
 
     .left-section {
@@ -68,4 +68,9 @@
         }
 
     }
+}
+
+hr {
+    margin-top: 2px;
+    width: 90%;
 }

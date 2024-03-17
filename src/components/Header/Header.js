@@ -4,6 +4,7 @@ import logo from '../../assets/SSPS.png'
 
 function Header() {
   return (
+    <>
     <div className="parent-div">
       <section className="left-section">
         <img className='logo' src={logo} alt="Sunshine School" />
@@ -14,9 +15,10 @@ function Header() {
         <span className="third-line">AN ENGLISH MEDIUM CO-EDUCATONAL SCHOOL WITH URDU, QURAN AND DEENIYAT</span>
         <span className="fourth-line">NAHAL, GHAZIABAD</span>
         <span className="fifth-line">ADMISSION FORM</span>
-        <hr />
       </section>
     </div>
+    <hr />
+    </>
   )
 }
 

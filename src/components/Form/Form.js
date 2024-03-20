@@ -10,15 +10,13 @@ function Form() {
     const [loading, setLoading] = useState(false)
 
     const showToastMessage = () => {
-        toast.success("SUCESSFULLY SUBMITTED", {
-            position: toast.POSITION.TOP_RIGHT,
-        });
+        toast.success("SUCESSFULLY SUBMITTED"
+        );
     };
 
     const handleSubmit = (e) => {
         e.preventDefault()
         setLoading(true)
-
         fetch(url, {
             method: 'POST',
             body: new FormData(formRef.current),
@@ -84,45 +82,45 @@ function Form() {
                             <input type="tel" minLength="12" maxLength="12" name="AADHAAR NUMBER" required />
                         </label>
                         <label for="SPECIAL CATEGORY">ANY OTHER SPECIAL CATEGORY:
-                        &nbsp; NA<input type="radio" value="NA" name="SPECIAL CATEGORY" required />
-                        BPL<input type="radio" value="BPL" name="SPECIAL CATEGORY" required />
-                        PH<input type="radio" value="PH" name="SPECIAL CATEGORY" required />
-                        ORPHAN<input type="radio" value="ORPHAN" name="SPECIAL CATEGORY" required />
-                    </label>
-                    <label for="LAST SCHOOL">PREVIOUS SCHOOL NAME
-                        <input type="text" name="LAST SCHOOL" required />
-                    </label>
-                    <label for="CLASS ATTENDED">
-                        CLASS ATTENDED
-                        <select className="select-class" name="CLASS ATTENDED" required>
-                            <option value="KG">KG</option>
-                            <option value="NURSERY">NURSERY</option>
-                            <option value="I">I</option>
-                            <option value="II">II</option>
-                            <option value="III">III</option>
-                            <option value="IV">IV</option>
-                            <option value="V">V</option>
-                            <option value="VI">VI</option>
-                            <option value="VII">VII</option>
-                            <option value="VIII">VIII</option>
-                        </select>
-                    </label>
-                    <label for="RESULT">
-                        RESULT
-                        <select className="select-class" name="RESULT" required>
-                            <option value="PASS">PASS</option>
-                            <option value="FAIL">FAIL</option>
-                            <option value="RESULT WAITING">RESULT WAITING</option>
-                        </select>
-                    </label>
-                    <label for="MEDIUM">
-                        MEDIUM
-                        <select className="select-class" name="MEDIUM" required>
-                            <option value="PASS">HINDI</option>
-                            <option value="FAIL">ENGLISH</option>
-                            <option value="RESULT WAITING">URDU</option>
-                        </select>
-                    </label>
+                            &nbsp; NA<input type="radio" value="NA" name="SPECIAL CATEGORY" required />
+                            BPL<input type="radio" value="BPL" name="SPECIAL CATEGORY" required />
+                            PH<input type="radio" value="PH" name="SPECIAL CATEGORY" required />
+                            ORPHAN<input type="radio" value="ORPHAN" name="SPECIAL CATEGORY" required />
+                        </label>
+                        <label for="LAST SCHOOL">PREVIOUS SCHOOL NAME
+                            <input type="text" name="LAST SCHOOL" required />
+                        </label>
+                        <label for="CLASS ATTENDED">
+                            CLASS ATTENDED
+                            <select className="select-class" name="CLASS ATTENDED" required>
+                                <option value="KG">KG</option>
+                                <option value="NURSERY">NURSERY</option>
+                                <option value="I">I</option>
+                                <option value="II">II</option>
+                                <option value="III">III</option>
+                                <option value="IV">IV</option>
+                                <option value="V">V</option>
+                                <option value="VI">VI</option>
+                                <option value="VII">VII</option>
+                                <option value="VIII">VIII</option>
+                            </select>
+                        </label>
+                        <label for="RESULT">
+                            RESULT
+                            <select className="select-class" name="RESULT" required>
+                                <option value="PASS">PASS</option>
+                                <option value="FAIL">FAIL</option>
+                                <option value="RESULT WAITING">RESULT WAITING</option>
+                            </select>
+                        </label>
+                        <label for="MEDIUM">
+                            MEDIUM
+                            <select className="select-class" name="MEDIUM" required>
+                                <option value="PASS">HINDI</option>
+                                <option value="FAIL">ENGLISH</option>
+                                <option value="RESULT WAITING">URDU</option>
+                            </select>
+                        </label>
                     </div>
                     <input className="file-input" type="file" name="PHOTO" placeholder="Upload a photo" accept=".jpg, .png" />
                 </fieldset>
@@ -204,31 +202,31 @@ function Form() {
                 </fieldset>
                 <fieldset className="guardian-details">
                     <legend>GUARDIAN DETAILS:</legend>
-                <label for="GUARDIAN'S NAME">GUARDIAN'S NAME
-                    <input type="text" name="GUARDIAN'S NAME" required />
-                </label>
-                <label for="RELATION">RELATION
-                    <input type="text" name="RELATION" required />
-                </label>
-                <label for="GUARDIAN'S EDUCATION">
-                    EDUCATION
-                    <select className="select-class" name="GUARDIAN'S EDUCATION" required>
-                        <option value="UNEDUCATED">UNEDUCATED</option>
-                        <option value="MATRICULATE">MATRICULATE</option>
-                        <option value="INTERMEDIATE">INTERMEDIATE</option>
-                        <option value="GRADUATION">GRADUATION</option>
-                        <option value="POST GRADUATION">POST GRADUATION</option>
-                    </select>
-                </label>
-                <label for="GUARDIAN'S MOBILE">GUARDIAN'S MOBILE NUMBER
-                    <input type="tel" minLength="10" maxLength="10" name="GUARDIAN'S MOBILE" required />
-                </label>
-                <label for="GUARDIAN'S AADHAAR">GUARDIAN'S AADHAAR NUMBER
-                    <input type="tel" minLength="12" maxLength="12" name="GUARDIAN'S AADHAAR" required />
-                </label>
+                    <label for="GUARDIAN'S NAME">GUARDIAN'S NAME
+                        <input type="text" name="GUARDIAN'S NAME" required />
+                    </label>
+                    <label for="RELATION">RELATION
+                        <input type="text" name="RELATION" required />
+                    </label>
+                    <label for="GUARDIAN'S EDUCATION">
+                        EDUCATION
+                        <select className="select-class" name="GUARDIAN'S EDUCATION" required>
+                            <option value="UNEDUCATED">UNEDUCATED</option>
+                            <option value="MATRICULATE">MATRICULATE</option>
+                            <option value="INTERMEDIATE">INTERMEDIATE</option>
+                            <option value="GRADUATION">GRADUATION</option>
+                            <option value="POST GRADUATION">POST GRADUATION</option>
+                        </select>
+                    </label>
+                    <label for="GUARDIAN'S MOBILE">GUARDIAN'S MOBILE NUMBER
+                        <input type="tel" minLength="10" maxLength="10" name="GUARDIAN'S MOBILE" required />
+                    </label>
+                    <label for="GUARDIAN'S AADHAAR">GUARDIAN'S AADHAAR NUMBER
+                        <input type="tel" minLength="12" maxLength="12" name="GUARDIAN'S AADHAAR" required />
+                    </label>
                 </fieldset>
-                <button className="submit-button" type="submit" onClick={handleSubmit}>SUBMIT</button>
-                {/* <ToastContainer /> */}
+                <ToastContainer position="top-right" />
+                <submit className="submit-button" type="submit" onClick={handleSubmit} disabled={!formRef}>SUBMIT</submit>
             </form>
         </div>
     )

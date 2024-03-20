@@ -83,13 +83,13 @@ function Form() {
                         <label for="AADHAAR">AADHAAR NUMBER
                             <input type="tel" minLength="12" maxLength="12" name="AADHAAR NUMBER" required />
                         </label>
-                        <label for="SPECIAL CATEGORY">WHETHER BELONG TO ANY OTHER SPECIAL CATEGORY:
+                        <label for="SPECIAL CATEGORY">ANY OTHER SPECIAL CATEGORY:
                         &nbsp; NA<input type="radio" value="NA" name="SPECIAL CATEGORY" required />
                         BPL<input type="radio" value="BPL" name="SPECIAL CATEGORY" required />
                         PH<input type="radio" value="PH" name="SPECIAL CATEGORY" required />
                         ORPHAN<input type="radio" value="ORPHAN" name="SPECIAL CATEGORY" required />
                     </label>
-                    <label for="LAST SCHOOL">SCHOOL LAST ATTENDED
+                    <label for="LAST SCHOOL">PREVIOUS SCHOOL NAME
                         <input type="text" name="LAST SCHOOL" required />
                     </label>
                     <label for="CLASS ATTENDED">

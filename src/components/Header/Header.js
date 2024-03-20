@@ -17,7 +17,6 @@ function Header() {
         <span className="fifth-line">ADMISSION FORM</span>
       </section>
     </div>
-    <hr />
     </>
   )
 }

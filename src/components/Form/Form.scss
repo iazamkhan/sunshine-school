@@ -7,13 +7,25 @@
     font-weight: 500;
     font-size: 0.8em;
     font-family: "Angkor", serif;
+
     
     .student-details {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        max-width: 50%;
+        width: 50%;
+
+        @media screen and (max-width: 800px) {
+            min-width: 80%;
+        }
+
+        .file-input {
+            border: 0.5px dotted #343a40;
+            height: 110px;
+            width: 80px;
+        }
+
 
         .left-part {
             display: flex;
@@ -29,6 +41,10 @@
         align-items: flex-start;
         justify-content: space-between;
         min-width: 50%;
+
+        @media screen and (max-width: 800px) {
+            min-width: 85%;
+        }
     }
 
     .parents-details {
@@ -37,6 +53,10 @@
         align-items: flex-start;
         justify-content: space-between;
         min-width: 50%;
+
+        @media screen and (max-width: 800px) {
+            min-width: 85%;
+        }
     }
 
     .guardian-details {
@@ -45,12 +65,30 @@
         align-items: flex-start;
         justify-content: space-between;
         min-width: 50%;
+
+        @media screen and (max-width: 800px) {
+            min-width: 85%;
+        }
     }
 }
 
 input, select, label {
     margin-left: 5px;
     margin-top: 5px;
+}
+
+input, select  {
+    border: none;
+    border-bottom: 1px solid #6c757d;
+
+    @media screen and (max-width: 800px) {
+        max-width: 80px;
+    }
+
+    &:focus {
+        outline: none;
+        border-bottom: 1.5px solid #6c757d;
+    }
 }
 
 fieldset {

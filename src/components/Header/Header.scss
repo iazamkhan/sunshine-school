@@ -4,6 +4,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 0 0;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    border-bottom: 0.2px dotted #343a40 ;
     
 
     @media only screen and (min-width: 800px) {
@@ -70,8 +74,3 @@
     }
 }
 
-hr {
-    margin-top: 2px;
-    width: 90%;
-    height: 40%;
-}

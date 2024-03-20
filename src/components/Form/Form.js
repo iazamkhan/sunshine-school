@@ -6,7 +6,7 @@ import './Form.scss'
 
 function Form() {
 
-    const url = "https://script.google.com/macros/s/AKfycbyb75VSgT4BCiwGEZ_ipoJINBGWi8ievFUccBXNV73WxyNXMsaG-cYMC7BJhqks6hPwzg/exec"
+    const url = "https://script.google.com/macros/s/AKfycbybbp2SkoB-ngB9-bCJx5Xn2GS5e7W63pgeZSKD2VpHhVU3ipuGxIdxr8N0VEQevi0yow/exec"
     const formRef = useRef(null)
     const [loading, setLoading] = useState(false)
 

@@ -1,11 +1,19 @@
 import React, { useRef, useState } from 'react'
+import { toast, ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 import './Form.scss'
 
 function Form() {
 
-    const url = "https://script.google.com/macros/s/AKfycbxBUNWv_ln7vz38z4Rfs9KgBsJ2RpQ4AvqpEoK-NfNreVeHWlFmbcgQSvTHeqzRwPOcAA/exec"
+    const url = "https://script.google.com/macros/s/AKfycbzy7l31izNFRlG8gj8gyfGg4AEY4HNWMt9DKTliOwk-3KPWKmI9LFPl_IHkPdzgz2T5Kw/exec"
     const formRef = useRef(null)
     const [loading, setLoading] = useState(false)
+
+    const showToastMessage = () => {
+        toast.success("SUCESSFULLY SUBMITTED", {
+            position: toast.POSITION.TOP_RIGHT,
+        });
+      };
 
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -18,6 +26,7 @@ function Form() {
         }).then(res => {
             console.log("SUCCESSFULLY SUBMITTED")
             setLoading(false)
+            showToastMessage()
         })
             .catch(err => console.log(err))
     }
@@ -80,7 +89,7 @@ function Form() {
                         </div>
                         <div className="name-and-class">
                             <label for="AADHAAR">AADHAAR NUMBER
-                                <input type="tel" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" minLength="12" maxLength="12" name="AADHAAR NUMBER" required />
+                                <input type="tel" minLength="12" maxLength="12" name="AADHAAR NUMBER" required />
                             </label>
                         </div>
                     </div>
@@ -141,8 +150,33 @@ function Form() {
                             <input type="text" name="BRANCH" required />
                         </label>
                     </div>
+                    <div className="name-and-class">
+                        <label for="MOTHER'S NAME">MOTHER'S NAME
+                            <input type="text" name="MOTHER'S NAME" required />
+                        </label>
+                        <label for="MOTHER'S OCCUPATION">
+                            OCCUPATION
+                            <select className="select-class" name="MOTHER'S OCCUPATION" required>
+                                <option value="HOUSEWIFE">HOUSEWIFE</option>
+                                <option value="BUSINESS">BUSINESS</option>
+                                <option value="GOVERNMENT JOB">GOVERNMENT JOB</option>
+                                <option value="CORPORATE JOB">CORPORATE JOB</option>
+                            </select>
+                        </label>
+                        <label for="MOTHER'S EDUCATION">
+                            EDUCATION
+                            <select className="select-class" name="MOTHER'S EDUCATION" required>
+                                <option value="UNEDUCATED">UNEDUCATED</option>
+                                <option value="MATRICULATE">MATRICULATE</option>
+                                <option value="INTERMEDIATE">INTERMEDIATE</option>
+                                <option value="GRADUATION">GRADUATION</option>
+                                <option value="POST GRADUATION">POST GRADUATION</option>
+                            </select>
+                        </label>
+                    </div>
                 </section>
-                <button type="submit" onClick={handleSubmit}>Submit</button>
+                {/* <button type="submit" onClick={handleSubmit}>Submit</button> */}
+                {/* <ToastContainer /> */}
             </form>
         </div>
     )

@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { toast, ToastContainer } from 'react-toastify';
+import { Audio } from 'react-loader-spinner'
 import "react-toastify/dist/ReactToastify.css";
 import './Form.scss'
 
@@ -226,6 +227,15 @@ function Form() {
                     </label>
                 </fieldset>
                 <ToastContainer position="top-right" />
+                {loading && <span style={{padding: "10px 0"}}><Audio
+                    height="20"
+                    width="20"
+                    radius="9"
+                    color="green"
+                    ariaLabel="loading"
+                    wrapperStyle
+                    wrapperClass
+                /></span>}
                 <submit className="submit-button" type="submit" onClick={handleSubmit} disabled={!formRef}>SUBMIT</submit>
             </form>
         </div>

@@ -5,7 +5,7 @@ import './Form.scss'
 
 function Form() {
 
-    const url = "https://script.google.com/macros/s/AKfycbzy7l31izNFRlG8gj8gyfGg4AEY4HNWMt9DKTliOwk-3KPWKmI9LFPl_IHkPdzgz2T5Kw/exec"
+    const url = "https://script.google.com/macros/s/AKfycbyb75VSgT4BCiwGEZ_ipoJINBGWi8ievFUccBXNV73WxyNXMsaG-cYMC7BJhqks6hPwzg/exec"
     const formRef = useRef(null)
     const [loading, setLoading] = useState(false)
 
@@ -227,7 +227,7 @@ function Form() {
                     <input type="tel" minLength="12" maxLength="12" name="GUARDIAN'S AADHAAR" required />
                 </label>
                 </fieldset>
-                {/* <button type="submit" onClick={handleSubmit}>Submit</button> */}
+                <button className="submit-button" type="submit" onClick={handleSubmit}>SUBMIT</button>
                 {/* <ToastContainer /> */}
             </form>
         </div>

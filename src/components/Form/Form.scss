@@ -8,7 +8,7 @@
     font-size: 0.8em;
     font-family: "Angkor", serif;
 
-    
+
     .student-details {
         display: flex;
         flex-direction: row;
@@ -17,7 +17,8 @@
         width: 50%;
 
         @media screen and (max-width: 800px) {
-            min-width: 80%;
+            min-width: 85%;
+            flex-wrap: wrap-reverse;
         }
 
         .file-input {
@@ -32,6 +33,12 @@
             flex-direction: column;
             align-items: flex-start;
             justify-content: space-between;
+
+            .school-name {
+                @media screen and (max-width: 800px) {
+                    display: block;
+                }
+            }
         }
     }
 
@@ -70,19 +77,35 @@
             min-width: 85%;
         }
     }
+
+    .submit-button {
+        color: white;
+        background-color: green;
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        border: none;
+        border-radius: 3px;
+        padding: 10px;
+        -webkit-box-shadow: 6px 8px 16px -11px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 6px 8px 16px -11px rgba(0, 0, 0, 0.75);
+        box-shadow: 6px 8px 16px -11px rgba(0, 0, 0, 0.75);
+    }
 }
 
-input, select, label {
+input,
+select,
+label {
     margin-left: 5px;
     margin-top: 5px;
 }
 
-input, select  {
+input,
+select {
     border: none;
     border-bottom: 1px solid #6c757d;
 
     @media screen and (max-width: 800px) {
-        max-width: 80px;
+        max-width: 100px;
     }
 
     &:focus {
@@ -100,4 +123,3 @@ legend {
     font-weight: 550;
     font-size: 1em;
 }
-

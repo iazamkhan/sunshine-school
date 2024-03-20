@@ -22,8 +22,8 @@
             height: 165px;
 
             @media only screen and (max-width: 800px) {
-                width: 80px;
-                height: 115px;
+                width: 65px;
+                height: 96px;
             }
         }
     }
@@ -44,6 +44,10 @@
             font-weight: 400;
             font-style: normal;
 
+            @media only screen and (max-width: 800px) {
+                font-size: 1em;
+            }
+
         }
 
         .second-line {
@@ -52,23 +56,39 @@
             font-weight: 700;
             color: #343a40;
             font-family: "Diplomata SC", serif;
+
+            @media only screen and (max-width: 800px) {
+                font-size: 1.6em;
+            }
         }
 
         .third-line {
             font-size: 0.7em;
             font-family: "Diplomata SC", serif;
+
+            @media only screen and (max-width: 800px) {
+                font-size: 0.5em;
+            }
         }
 
         .fourth-line {
             font-weight: 700;
             font-size: 0.9em;
             font-family: "Lalezar", system-ui;
+
+            @media only screen and (max-width: 800px) {
+                font-size: 0.7em;
+            }
         }
 
         .fifth-line {
             margin-top: 40px;
             font-size: 1.1em;
             font-weight: 500;
+
+            @media only screen and (max-width: 800px) {
+                font-size: 1em;
+            }
         }
 
     }

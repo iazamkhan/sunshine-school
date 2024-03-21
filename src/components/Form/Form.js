@@ -8,6 +8,7 @@ function Form() {
 
     const url = "https://script.google.com/macros/s/AKfycbybbp2SkoB-ngB9-bCJx5Xn2GS5e7W63pgeZSKD2VpHhVU3ipuGxIdxr8N0VEQevi0yow/exec"
     const formRef = useRef(null)
+    const studentNameRef = useRef(null)
     const [loading, setLoading] = useState(false)
 
     const showToastMessage = () => {
@@ -17,13 +18,15 @@ function Form() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        let formData = new FormData(formRef.current)
         setLoading(true)
         fetch(url, {
             method: 'POST',
-            body: new FormData(formRef.current),
+            body: formData,
 
-        }).then(res => {
-            console.log("SUCCESSFULLY SUBMITTED")
+        })
+        .then(res => {
+            console.log("Successfully submitted")
             setLoading(false)
             showToastMessage()
         })
@@ -37,7 +40,7 @@ function Form() {
                     <legend>STUDENT DETAILS:</legend>
                     <div className="left-part">
                         <label for="STUDENT NAME">STUDENT NAME
-                            <input type="text" name="STUDENT NAME" required />
+                            <input type="text" ref={studentNameRef} name="STUDENT NAME" required />
                         </label>
                         <label for="CLASS">
                             CLASS
@@ -236,7 +239,7 @@ function Form() {
                     wrapperStyle
                     wrapperClass
                 /></span>}
-                <submit className="submit-button" type="submit" onClick={handleSubmit} disabled={!formRef}>SUBMIT</submit>
+                <button className="submit-button" type="submit" onClick={handleSubmit} disabled={!formRef}>SUBMIT</button>
             </form>
         </div>
     )
